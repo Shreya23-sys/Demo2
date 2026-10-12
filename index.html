@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Kala Laya Nepal — a community celebrating Nepali art, culture, theatre and creativity.">
+  <title>Create Account | Kala Laya Nepal</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Global Header -->
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="KalaLaya home">
+      <img src="logo.png" alt="Kala Laya Nepal Logo" class="brand-logo-img" id="mainHeaderLogo">
+      <span class="brand-copy">
+        <strong>KALALAYA</strong>
+        <small>Theater</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" type="button" aria-label="Search" id="searchButton">
+        <svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.7"/><path d="m16 16 5 5"/></svg>
+      </button>
+      <button class="header-login-btn" id="headerLoginBtn" type="button">Log In</button>
+      <div class="header-user-badge" id="headerUserBadge" style="display: none;">
+        <div class="header-user-avatar">KL</div>
+        <span class="header-user-info" id="headerUserName">Member</span>
+        <button class="logout-btn" id="logoutBtn" type="button" title="Log out">Sign Out</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="registration-layout" id="register">
+      <!-- Culture Panel / Backdrop Side -->
+      <aside class="culture-panel" id="culturePanel" aria-label="Kala Laya Nepal introduction">
+        <!-- Logo Background Artwork Layer -->
+        <div class="culture-bg-art mode-logo" id="cultureBgArt" aria-hidden="true"></div>
+        <div class="culture-overlay"></div>
+        
+        <!-- Top Controls on Culture Panel -->
+        <div class="culture-top-controls">
+          <span class="culture-badge-tag">कलालय नेपाल</span>
+          <div class="bg-mode-switcher" role="radiogroup" aria-label="Background display mode">
+            <button type="button" class="bg-switch-btn active" data-mode="logo" id="bgSwitchLogo" title="Display Kala Laya Nepal logo as background">Logo Backdrop</button>
+            <button type="button" class="bg-switch-btn" data-mode="cultural" id="bgSwitchCultural" title="Display cultural mask as background">Cultural Mask</button>
+          </div>
+        </div>
+
+        <!-- Culture Intro Content -->
+        <div class="culture-content">
+          <div class="culture-logo-badge" title="Kala Laya Nepal Official Emblem">
+            <img src="logo.jpg" alt="Kala Laya Nepal Official Emblem" class="culture-logo-img">
+          </div>
+          <h2>KALALAYA</h2>
+          <p class="culture-tagline">Theatres</p>
+          <span class="short-rule"></span>
+          <p class="culture-description">Join our community and be a part of a growing space that celebrates Nepali culture, theatre plays.</p>
+          <div class="lotus-decoration" aria-hidden="true">❀</div>
+        </div>
+      </aside>
+
+      <!-- Form Side -->
+      <section class="form-side" aria-labelledby="formTitle">
+        <div class="form-card">
+          <div class="form-card-badge" aria-hidden="true">
+            <img src="logo.png" alt="" class="form-badge-logo">
+          </div>
+          <h1 id="formTitle">Create Your Account</h1>
+          <p class="form-intro">Sign up to explore, learn, and be part of<br class="desktop-break"> Kalalaya.</p>
+
+          <form id="registrationForm" novalidate>
+            <div class="field">
+              <label for="fullName">Full Name <span>*</span></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.5" r="4"/><path d="M4 21v-2.1A5.9 5.9 0 0 1 9.9 13h4.2a5.9 5.9 0 0 1 5.9 5.9V21Z"/></svg>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" autocomplete="name" required minlength="2">
+              </div>
+              <small class="error-message" id="nameError"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span>*</span></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+                <input id="email" name="email" type="email" placeholder="example@domain.com" autocomplete="email" required>
+              </div>
+              <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="field">
+              <label for="password">Password <span>*</span></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v4"/></svg>
+                <input id="password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" required minlength="8">
+                <button class="visibility-toggle" type="button" data-target="password" aria-label="Show password">◉</button>
+              </div>
+              <small class="hint">Use at least 8 characters.</small>
+              <small class="error-message" id="passwordError"></small>
+            </div>
+
+            <div class="field">
+              <label for="confirmPassword">Confirm Password <span>*</span></label>
+              <div class="input-wrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v4"/></svg>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your password" autocomplete="new-password" required>
+                <button class="visibility-toggle" type="button" data-target="confirmPassword" aria-label="Show confirm password">◉</button>
+              </div>
+              <small class="error-message" id="confirmError"></small>
+            </div>
+
+            
+
+            <div class="terms-row">
+              <input id="terms" name="terms" type="checkbox" required>
+              <label for="terms">I agree to the <a href="#terms">Terms &amp; Conditions</a> and <a href="#privacy">Privacy Policy</a>.</label>
+            </div>
+            <small class="error-message terms-error" id="termsError"></small>
+
+            <button class="primary-button" type="submit" id="submitRegisterBtn">Register <span aria-hidden="true">→</span></button>
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="login-divider"><span></span><p>Already have an account?</p><span></span></div>
+          <button class="secondary-button" type="button" id="loginButton">Log In</button>
+        </div>
+      </section>
+    </section>
+
+    <!-- Mountain Art Section -->
+    <section class="mountain-footer-art" aria-hidden="true">
+      <div class="mountain-ranges"></div>
+      <div class="temple-art">⌂</div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <a class="footer-brand" href="#" aria-label="Kala Laya Nepal home">
+      <div class="footer-logo-badge">
+        <img src="logo.jpg" alt="Kala Laya Nepal Logo" class="footer-logo-img">
+      </div>
+      <span><strong>KALALAYA</strong><small>Theatre</small></span>
+    </a>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#">Home</a><a href="#about">About Us</a><a href="#gallery">Gallery</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="social-area">
+      <a href="#instagram" aria-label="Instagram">◎</a><a href="#facebook" aria-label="Facebook">f</a><a href="#youtube" aria-label="YouTube">▶</a>
+      <small>© 2026 Kalalaya. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- Login Modal Dialog -->
+  <div class="login-modal-overlay" id="loginModal" role="dialog" aria-modal="true" aria-labelledby="modalLoginTitle">
+    <div class="login-modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" type="button" aria-label="Close login dialog">✕</button>
+      <div class="modal-logo-wrap">
+        <img src="logo.jpg" alt="Kala Laya Nepal" class="modal-logo">
+      </div>
+      <h2 id="modalLoginTitle">Welcome Back</h2>
+      <p class="modal-subtitle">Log in to your Kalalaya account</p>
+
+      <form id="loginForm" novalidate>
+        <div class="field">
+          <label for="loginEmail">Email Address <span>*</span></label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3.5 6 8.5 7 8.5-7"/></svg>
+            <input id="loginEmail" name="email" type="email" placeholder="example@domain.com" autocomplete="email" required>
+          </div>
+          <small class="error-message" id="loginEmailError"></small>
+        </div>
+
+        <div class="field">
+          <label for="loginPassword">Password <span>*</span></label>
+          <div class="input-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v4"/></svg>
+            <input id="loginPassword" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+            <button class="visibility-toggle" type="button" data-target="loginPassword" aria-label="Show password">◉</button>
+          </div>
+          <small class="error-message" id="loginPasswordError"></small>
+        </div>
+
+        <button class="primary-button" type="submit" id="submitLoginBtn">Log In <span aria-hidden="true">→</span></button>
+        <div class="form-status" id="loginStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
